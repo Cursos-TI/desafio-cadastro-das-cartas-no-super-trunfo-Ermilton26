@@ -1,31 +1,12 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+int main () {
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
-
-    //DECLARAÇAO DE VARIÁVEIS PARA CARTA 01  E CARTA 02
-
-    char estado [50], estado02 [50];
-    char codigo [50], codigo02 [50];
+    char estado [2], estado02 [2];
+    char codigo [3], codigo02 [3];
     char cidade [50], cidade02 [50];
-    int populacao, pontosturisticos, populacao02, pontosturisticos02;
-    float area, pib, area02, pib02;
+    int  pontosturisticos, pontosturisticos02;
+    float area, pib, area02, pib02, populacao, populacao02;
 
     //ENTRADA DE DADOS ATRAVÉS DO scanf
     //cada variável com suas devidas declarações e funções
@@ -41,7 +22,7 @@ int main() {
     scanf("%s", cidade);
 
     printf("digite a populacao: ");
-    scanf("%d", &populacao);
+    scanf("%f", &populacao);
 
     printf("digite a area: ");
     scanf("%f", &area);
@@ -54,8 +35,9 @@ int main() {
 
     //ENTRADA DE DADOS ATRAVÉS DO scanf
     //cada variável com suas devidas declarações e funções
-
+    printf("\n");
     printf("CARTA 02: \n");
+    printf("\n");
     printf("digite seu estado: ");
     scanf("%s", estado02);
 
@@ -66,7 +48,7 @@ int main() {
     scanf("%s", cidade02);
 
     printf("digite a populacao: ");
-    scanf("%d", &populacao02);
+    scanf("%f", &populacao02);
 
     printf("digite a area: ");
     scanf("%f", &area02);
@@ -77,29 +59,50 @@ int main() {
     printf("digite a pontos turisticos: ");
     scanf("%d", &pontosturisticos02);
 
-    //Impressão na tela da carta 01
-    //Utilização do printf para tal tarefa;
+    //declaração das variaveis para calculo de densidade e pibpercapita
+    
+    float  densidade, pibpercapita, densidade2, pibpercapita2;
+    
+    //calculo das variaveis
 
+    densidade = populacao / area;
+    pibpercapita = pib / populacao;
+
+    densidade2 = populacao02 / area02;
+    pibpercapita2 = pib02 / populacao02;
+
+
+    //Impressão na tela da carta 01
+    //Utilização do printf para tal tarefa
+
+    printf("\n");
+    printf("******IMPRESSÃO DA CARTA 01*****\n");
+    printf("\n");
     printf("nome do estado : %s \n", estado);
     printf("codigo : %s \n", codigo);
     printf("nome da cidade : %s \n", cidade);
-    printf("populacao : %d \n", populacao);
-    printf("area : %f \n", area);
-    printf("pib : %f \n", pib);
+    printf("populacao : %.0f \n", populacao);
+    printf("area : %.2f km² \n", area);
+    printf("pib : %f bilhões de reais \n", pib);
     printf("pontos turisticos : %d \n", pontosturisticos);
+    printf("densidade populacional : %.2f hab/km² \n", densidade);
+    printf("PIB per Capita : %.2f reais \n", pibpercapita*1000000000);
 
     //Impressão na tela da carta 02
     //Utilização do printf para tal tarefa;
 
+    printf("\n");
+    printf("******IMPRESSÃO DA CARTA 02*****\n");
+    printf("\n");
     printf("nome do estado : %s \n", estado02);
     printf("codigo : %s \n", codigo02);
     printf("nome da cidade : %s \n", cidade02);
-    printf("populacao : %d \n", populacao02);
-    printf("area : %f \n", area02);
-    printf("pib : %f \n", pib02);
+    printf("populacao : %.0f \n", populacao02);
+    printf("area : %.2f \n", area02);
+    printf("pib : %.2f \n", pib02);
     printf("pontos turisticos : %d \n", pontosturisticos02);
-
-
+    printf("densidade populacional : %.2f hab/km² \n", densidade2);
+    printf("PIB per Capita : %.2f reais \n", pibpercapita2*1000000000);
 
     return 0;
 }
