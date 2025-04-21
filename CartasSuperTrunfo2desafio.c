@@ -157,12 +157,6 @@ int main () {
         printf("Densidade : Carta 02 venceu! (0)\n");
       }
 
-      if (pib > pib02) {  // Verifica se valor1 é maior que valor2
-        printf("PIB : Carta 01 venceu! (1) \n");
-      } else {
-        printf("PIB : Carta 02 venceu! (0)\n");
-      }
-
       if (pibpercapita > pibpercapita2) {  // Verifica se valor1 é maior que valor2
         printf("PIB percapita : Carta 01 venceu! (1) \n");
       } else {
