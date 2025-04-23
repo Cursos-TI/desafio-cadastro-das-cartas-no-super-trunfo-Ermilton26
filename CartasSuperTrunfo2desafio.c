@@ -2,8 +2,8 @@
 
 int main () {
 
-    char estado [2], estado02 [2];
-    char codigo [3], codigo02 [3];
+    char estado [10], estado02 [10];
+    char codigo [10], codigo02 [10];
     char cidade [50], cidade02 [50];
     int  pontosturisticos, pontosturisticos02;
     float area, pib, area02, pib02, populacao, populacao02;
@@ -168,7 +168,24 @@ int main () {
       } else {
         printf("Super Poder : Carta 02 venceu! (0)\n");
       }
-    
+      printf("\n");
+      printf("Comparação de cartas (Atributo: População): \n");
+      printf("\n");
+
+      printf("Carta 1 - %s (%s) :  %.0f \n", cidade, estado, populacao);
+      printf("Carta 2 - %s (%s) :  %.0f \n", cidade02, estado02, populacao02);
+      printf("\n");
+
+      if (populacao > populacao02) {  // Verifica se valor1 é maior que valor2
+        printf("Resultado : Carta 01 (%s) venceu! \n", cidade);
+      } else {
+        printf("Resultado : Carta 02 (%s) venceu! \n", cidade02);
+      }     
+//Carta 1 - São Paulo (SP): 12.300.000
+
+//Carta 2 - Rio de Janeiro (RJ): 6.000.000
+
+//Resultado: Carta 1 (São Paulo) venceu!
     
 
     return 0;
